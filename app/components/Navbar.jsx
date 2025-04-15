@@ -15,16 +15,16 @@ const Navbar = () => {
       <div className="navbar-center">
         <div className="flex">
           <ul className="flex flex-row gap-20 font-medium">
-            <li>Become a renter</li>
-            <li>Rental deals</li>
-            <li>How it work</li>
-            <li>Why chose us</li>
+            <li className="hover:cursor-pointer hover:opacity-60">Become a renter</li>
+            <li className="hover:cursor-pointer hover:opacity-60">Rental deals</li>
+            <li className="hover:cursor-pointer hover:opacity-60">How it work</li>
+            <li className="hover:cursor-pointer hover:opacity-60">Why chose us</li>
           </ul>
         </div>
       </div>
       <div className="navbar-end gap-3">
-        <a className="btn btn-ghost font-medium">Sign In</a>
-        <a className="btn bg-[#1572D3] font-medium text-white h-1 outline-none">Sign Up</a>
+        <button className="btn btn-ghost font-medium text-dark btn-sm border-none">Sign In</button>
+        <button className="btn bg-[#1572D3] font-medium text-white btn-sm border-none px-6 hover:none">Sign Up</button>
       </div>
     </div>
   )
