@@ -15,15 +15,28 @@ import Ring from "@/assets/image/ring.png"
 import Vector from "@/assets/image/vector2.png"
 import Car2 from "@/assets/image/mobil2.png"
 import Wallet from "@/assets/image/wallet.png"
+import Card from "./components/Card";
+import JaguarCar from "@/assets/image/jaguarcar.png"
+import User from "@/assets/image/user.png"
+import Engine from "@/assets/image/engine.png"
+import AirConditioner from "@/assets/image/ac.png"
+import Door from "@/assets/image/door.png"
+import UserDriver from "@/assets/image/user-tick.png"
+import Support from "@/assets/image/24-support.png"
+import Message from "@/assets/image/messages-2.png"
+import ArrowRight from "./components/icons/ArrowRight";
+
+
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <Navbar/>
       <div className="relative">
         <Image
           src={BgHero}
           className="w-[600px] absolute right-0 opacity-20 -z-999"
+          alt="image-hero"
         />
         <HeroSection/>
         <SearchBox/>
@@ -96,18 +109,20 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex min-h-screen items-center justify-center gap-20">
-          <div className="w-1/2 h-full">
+        <div className="flex items-center justify-center gap-20">
+          <div className="w-1/2 relative">
             <Image
               src={Vector}
-              className="absolute w-[800px] z-0"
+              className="absolute w-[800px] "
+              alt="bg-vector"
             />
             <Image
               src={Car2}
               className="relative translate-y-44 z-10"
+              alt="car2"
             />
           </div>
-          <div className="w-1/2 h-full translate-y-48">
+          <div className="w-1/2 mt-48">
             <div className="h-10 w-44 bg-[#1572D3]/10 rounded-lg flex items-center justify-center ">
               <p className="text-[#1572D3] font-medium">HOW IT WORK</p>
             </div>
@@ -117,6 +132,8 @@ export default function Home() {
                 <div className="h-16 w-16 flex items-center justify-center bg-[#1572D3]/15 rounded-xl p-4">
                   <Image
                     src={Wallet}
+                    className=""
+                    alt="wallet"
                   />
                 </div>
                 <div className="space-y-2 -translate-y-3">
@@ -127,38 +144,57 @@ export default function Home() {
               <div className="flex gap-6">
                 <div className="h-16 w-16 flex items-center justify-center bg-[#1572D3]/15 rounded-xl p-4">
                   <Image
-                    src={Wallet}
+                    src={UserDriver}
+                    className=""
+                    alt="user-tick"
                   />
                 </div>
                 <div className="space-y-2 -translate-y-3">
-                  <h1 className="font-medium text-xl">Best price guaranteed</h1>
-                  <p className="font-normal text-md text-slate-400 max-w-[330px]">Find a lower price? We’ll refund you 100% of the difference.</p>
+                  <h1 className="font-medium text-xl">Experience driver</h1>
+                  <p className="font-normal text-md text-slate-400 max-w-[330px]">Don’t have driver? Don’t worry, we have many experienced driver for you.</p>
                 </div>
               </div>
               <div className="flex gap-6">
                 <div className="h-16 w-16 flex items-center justify-center bg-[#1572D3]/15 rounded-xl p-4">
                   <Image
-                    src={Wallet}
+                    src={Support}
+                    className=""
+                    alt="24-support"
                   />
                 </div>
                 <div className="space-y-2 -translate-y-3">
-                  <h1 className="font-medium text-xl">Best price guaranteed</h1>
-                  <p className="font-normal text-md text-slate-400 max-w-[330px]">Find a lower price? We’ll refund you 100% of the difference.</p>
+                  <h1 className="font-medium text-xl">24 hour car delivery</h1>
+                  <p className="font-normal text-md text-slate-400 max-w-[330px]">Book your car anytime and we will deliver it directly to you.</p>
                 </div>
               </div>
               <div className="flex gap-6">
                 <div className="h-16 w-16 flex items-center justify-center bg-[#1572D3]/15 rounded-xl p-4">
                   <Image
-                    src={Wallet}
+                    src={Message}
+                    className=""
+                    alt="message"
                   />
                 </div>
                 <div className="space-y-2 -translate-y-3">
-                  <h1 className="font-medium text-xl">Best price guaranteed</h1>
-                  <p className="font-normal text-md text-slate-400 max-w-[330px]">Find a lower price? We’ll refund you 100% of the difference.</p>
+                  <h1 className="font-medium text-xl">24/7 technical support</h1>
+                  <p className="font-normal text-md text-slate-400 max-w-[380px]">Have a question? Contact Rentcars support any time when you have problem.</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="flex flex-col items-center justify-center mt-24 space-y-8">
+            <div className="h-10 w-60 bg-[#1572D3]/10 rounded-lg flex items-center justify-center ">
+              <p className="text-[#1572D3] font-medium">POPULAR RENTAL DEALS</p>
+            </div>
+            <h1 className="text-4xl font-medium">Most popular cars rental deals</h1>
+            <div className="flex gap-6">
+              <Card/>
+            </div>
+            <div className="card-actions flex justify-center mt-4">
+              <button className="btn btn-wide items-center bg-white outline-3 font-medium text-slate-600">Rent Now <ArrowRight/></button>
+            </div>
         </div>
       </div>
     </div>
